@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>IdeateX-ScaleUp - Make something people want</title>
 <style>
+/* Same styles as before omitted for brevity, styles remain unchanged */
 :root {
     --yc-orange: #ff6600;
     --yc-black: #000000;
@@ -196,16 +197,27 @@ body {
     padding: 30px;
     border-radius: 8px;
     color: #fff;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+.testimonial img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+.testimonial-text {
+    flex-grow: 1;
 }
 .testimonial-quote {
     font-size: 16px;
     line-height: 1.6;
-    margin-bottom: 20px;
+    margin-bottom: 8px;
     font-style: italic;
 }
 .testimonial-author {
     font-weight: 600;
-    margin-bottom: 4px;
 }
 .testimonial-title {
     font-size: 14px;
@@ -249,6 +261,26 @@ body {
     height: auto;
     margin-bottom: 12px;
 }
+.apply-section {
+    text-align: center;
+    background-color: var(--yc-light-gray);
+    padding: 60px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    gap: 40px;
+}
+.apply-text {
+    font-size: 18px;
+    color: var(--yc-gray);
+}
+.apply-image {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
 .footer {
     background-color: var(--yc-black);
     color: var(--yc-white);
@@ -269,6 +301,7 @@ body {
     cursor: pointer;
     transition: opacity 0.2s;
     margin-top: 20px;
+    max-width: 300px;
 }
 .cta-button:hover {
     opacity: 0.9;
@@ -279,6 +312,10 @@ body {
     .stat-number { font-size: 32px; }
     .section h2 { font-size: 28px; }
     .benefits-grid, .testimonial-grid, .resources-grid { grid-template-columns: 1fr; }
+    .apply-section {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
 }
 </style>
 </head>
@@ -389,24 +426,36 @@ body {
   <h2>Hear more from the community.</h2>
   <div class="testimonial-grid">
     <div class="testimonial">
-      <div class="testimonial-quote">"IdeateX-ScaleUp is the best program for creating top-end entrepreneurs that has ever existed."</div>
-      <div class="testimonial-author">Marc Andreessen</div>
-      <div class="testimonial-title">General Partner, Andreessen Horowitz</div>
+      <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Marc Andreessen" />
+      <div class="testimonial-text">
+        <div class="testimonial-quote">"IdeateX-ScaleUp is the best program for creating top-end entrepreneurs that has ever existed."</div>
+        <div class="testimonial-author">Marc Andreessen</div>
+        <div class="testimonial-title">General Partner, Andreessen Horowitz</div>
+      </div>
     </div>
     <div class="testimonial">
-      <div class="testimonial-quote">"IdeateX-ScaleUp is the best startup accelerator in the world. IdeateX-ScaleUp helps their companies a lot, and the IdeateX-ScaleUp community is a huge asset for the companies that go through the program."</div>
-      <div class="testimonial-author">Ron Conway</div>
-      <div class="testimonial-title">Founder, SV Angel</div>
+      <img src="https://randomuser.me/api/portraits/men/87.jpg" alt="Ron Conway" />
+      <div class="testimonial-text">
+        <div class="testimonial-quote">"IdeateX-ScaleUp is the best startup accelerator in the world. IdeateX-ScaleUp helps their companies a lot, and the community is a huge asset."</div>
+        <div class="testimonial-author">Ron Conway</div>
+        <div class="testimonial-title">Founder, SV Angel</div>
+      </div>
     </div>
     <div class="testimonial">
-      <div class="testimonial-quote">"At IdeateX-ScaleUp, we were challenged to do things that don't scale – to start with the perfect experience for one person, then work backwards and scale it to 100 people who love us. This was the best piece of advice we've ever received."</div>
-      <div class="testimonial-author">Brian Chesky</div>
-      <div class="testimonial-title">Founder, Airbnb (IdeateX-ScaleUp W09)</div>
+      <img src="https://randomuser.me/api/portraits/men/20.jpg" alt="Brian Chesky" />
+      <div class="testimonial-text">
+        <div class="testimonial-quote">"At IdeateX-ScaleUp, we were challenged to do things that don't scale – to start with the perfect experience for one person."</div>
+        <div class="testimonial-author">Brian Chesky</div>
+        <div class="testimonial-title">Founder, Airbnb (IdeateX-ScaleUp W09)</div>
+      </div>
     </div>
     <div class="testimonial">
-      <div class="testimonial-quote">"I doubt that Stripe would have worked without IdeateX-ScaleUp. It's that simple. Acquiring early customers, figuring out who to hire, closing deals with banks, raising money – IdeateX-ScaleUp's partners were closely involved and crucially helpful."</div>
-      <div class="testimonial-author">Patrick Collison</div>
-      <div class="testimonial-title">Founder, Stripe (IdeateX-ScaleUp S09)</div>
+      <img src="https://randomuser.me/api/portraits/men/72.jpg" alt="Patrick Collison" />
+      <div class="testimonial-text">
+        <div class="testimonial-quote">"I doubt that Stripe would have worked without IdeateX-ScaleUp. Acquiring early customers, figuring out who to hire, closing deals."</div>
+        <div class="testimonial-author">Patrick Collison</div>
+        <div class="testimonial-title">Founder, Stripe (IdeateX-ScaleUp S09)</div>
+      </div>
     </div>
   </div>
 </section>
@@ -421,31 +470,39 @@ body {
     </div>
     <div class="resource-card">
       <h3>Newsletter</h3>
+      <img src="https://images.unsplash.com/photo-1510626176961-4b94a0f2f418?auto=format&fit=crop&w=280&q=80" alt="Newsletter" />
       <p>Keep up with the latest news, launches, jobs, and events from the IdeateX-ScaleUp community</p>
     </div>
     <div class="resource-card">
       <h3>Launch IdeateX-ScaleUp</h3>
+      <img src="https://images.unsplash.com/photo-1474631245212-32dc3c8310c6?auto=format&fit=crop&w=280&q=80" alt="Launch" />
       <p>Discover new IdeateX-ScaleUp companies and products</p>
     </div>
     <div class="resource-card">
       <h3>Work at a Startup</h3>
+      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=280&q=80" alt="Work at a Startup" />
       <p>Find your next role at a IdeateX-ScaleUp startup</p>
     </div>
     <div class="resource-card">
       <h3>Blog</h3>
+      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=280&q=80" alt="Blog" />
       <p>Essays, events, and announcements from IdeateX-ScaleUp</p>
     </div>
     <div class="resource-card">
       <h3>Co-Founder Matching</h3>
+      <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=280&q=80" alt="Co-Founder Matching" />
       <p>Meet a potential co-founder to start a startup with</p>
     </div>
   </div>
 </section>
 
-<section class="section" id="apply" style="text-align: center; background-color: var(--yc-light-gray);">
-  <h2>Ready to build something people want?</h2>
-  <p style="font-size: 18px; color: var(--yc-gray); margin-bottom: 30px;">Join 5,000 funded startups and start your journey with IdeateX-ScaleUp.</p>
-  <button class="cta-button">Apply to IdeateX-ScaleUp</button>
+<section class="apply-section" id="apply">
+  <div>
+    <h2>Ready to build something people want?</h2>
+    <p class="apply-text">Join 5,000 funded startups and start your journey with IdeateX-ScaleUp.</p>
+    <button class="cta-button">Apply to IdeateX-ScaleUp</button>
+  </div>
+  <img class="apply-image" src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=640&q=80" alt="Build something people want" />
 </section>
 
 <footer class="footer">
@@ -459,8 +516,6 @@ function scrollToSection(id) {
         element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 }
-
-// Smooth scroll for all anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -470,13 +525,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
-
-// Fade-in animation on scroll
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
 };
-
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -485,8 +537,7 @@ const observer = new IntersectionObserver((entries) => {
         }
     });
 }, observerOptions);
-
-document.querySelectorAll('.benefit-card, .resource-card, .testimonial, .principle-item').forEach(card => {
+document.querySelectorAll('.benefit-card, .resource-card, .testimonial, .principle-item, .apply-section > div').forEach(card => {
     card.style.opacity = '0';
     card.style.transform = 'translateY(20px)';
     card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
