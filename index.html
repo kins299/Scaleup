@@ -164,20 +164,38 @@ body {
 .testimonials {
     background-color: var(--yc-orange);
     color: var(--yc-white);
+    position: relative;
+    padding-bottom: 60px;
+}
+.testimonials::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=40') no-repeat center/cover;
+    opacity: 0.15;
+    z-index: 0;
 }
 .testimonials h2 {
+    position: relative;
     color: var(--yc-white);
+    z-index: 1;
 }
 .testimonial-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
     margin-top: 40px;
+    position: relative;
+    z-index: 1;
 }
 .testimonial {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.2);
     padding: 30px;
     border-radius: 8px;
+    color: #fff;
 }
 .testimonial-quote {
     font-size: 16px;
@@ -275,7 +293,7 @@ body {
 
 <section class="hero">
   <h1>Make something people want.</h1>
-  <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Startup team meeting" />
+  <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80" alt="Startup team collaborating" />
   <div class="stats">
     <div class="stat">
       <span class="stat-number">5,000</span>
@@ -298,22 +316,22 @@ body {
   <div class="benefits-grid">
     <div class="benefit-card">
       <h3>Early stage support</h3>
-      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=280&q=80" alt="Supportive startup meeting" />
+      <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=280&q=80" alt="Startup team meeting" />
       <p>We help founders at their earliest stages regardless of their age.</p>
     </div>
     <div class="benefit-card">
       <h3>Improved success rate</h3>
-      <img src="https://images.unsplash.com/photo-1519337265831-281ec6cc8514?auto=format&fit=crop&w=280&q=80" alt="Success concept image" />
+      <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=280&q=80" alt="Success celebration" />
       <p>We improve the success rate of our startups.</p>
     </div>
     <div class="benefit-card">
       <h3>Fundraising advantage</h3>
-      <img src="https://images.unsplash.com/photo-1551836022-42990a5d33cc?auto=format&fit=crop&w=280&q=80" alt="Investor network image" />
+      <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=280&q=80" alt="Investor presenting to founders" />
       <p>We give startups a huge fundraising advantage.</p>
     </div>
     <div class="benefit-card">
       <h3>Billion dollar track record</h3>
-      <img src="https://images.unsplash.com/photo-1519337265831-281ec6cc8514?auto=format&fit=crop&w=280&q=80" alt="Track record image" />
+      <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=280&q=80" alt="Billion dollar company symbol" />
       <p>Our companies have a track record of becoming billion dollar companies.</p>
     </div>
   </div>
@@ -324,32 +342,32 @@ body {
   <div class="benefits-grid">
     <div class="benefit-card">
       <h3>The most experienced partners</h3>
-      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=280&q=80" alt="Experienced partners image" />
+      <img src="https://images.unsplash.com/photo-1497493292307-31c376b6e479?auto=format&fit=crop&w=280&q=80" alt="Mentor advising founders" />
       <p>Each founder is assigned a dedicated IdeateX-ScaleUp partner who has mentored hundreds of IdeateX-ScaleUp companies. They have more data on what it takes to build a successful startup than any other early stage startup advisor.</p>
     </div>
     <div class="benefit-card">
       <h3>Investor network</h3>
-      <img src="https://images.unsplash.com/photo-1551836022-42990a5d33cc?auto=format&fit=crop&w=280&q=80" alt="Investor network" />
+      <img src="https://images.unsplash.com/photo-1518606373211-c9e96e18a750?auto=format&fit=crop&w=280&q=80" alt="Investors networking" />
       <p>IdeateX-ScaleUp companies have raised $85 billion dollars from the best investors in the world. Our founders have access to the IdeateX-ScaleUp Investor Database which has profiles and reviews for more than 50,000 startup investors.</p>
     </div>
     <div class="benefit-card">
       <h3>Private social network only for founders</h3>
-      <img src="https://images.unsplash.com/photo-1551836022-42990a5d33cc?auto=format&fit=crop&w=280&q=80" alt="Social network community" />
+      <img src="https://images.unsplash.com/photo-1521747116042-5a810fda9664?auto=format&fit=crop&w=280&q=80" alt="Founders collaboration" />
       <p>IdeateX-ScaleUp founders get to benefit from the collective wisdom of over 9000 IdeateX-ScaleUp alumni through Bookface, our private social network.</p>
     </div>
     <div class="benefit-card">
       <h3>Exclusive deals</h3>
-      <img src="https://images.unsplash.com/photo-1519337265831-281ec6cc8514?auto=format&fit=crop&w=280&q=80" alt="Exclusive deals" />
+      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=280&q=80" alt="Exclusive business deals" />
       <p>IdeateX-ScaleUp founders have access to over 1000 deals from leading software companies. Companies report these deals to be worth in excess of $500,000.</p>
     </div>
     <div class="benefit-card">
       <h3>The best written advice</h3>
-      <img src="https://images.unsplash.com/photo-1519337265831-281ec6cc8514?auto=format&fit=crop&w=280&q=80" alt="Written advice" />
+      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=280&q=80" alt="Startup advice book" />
       <p>We have extensive documentation for common questions about fundraising, go to market, sales, product market fit, mental health, hiring, and much more.</p>
     </div>
     <div class="benefit-card">
       <h3>Networks to build your team</h3>
-      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=280&q=80" alt="Networks to build teams" />
+      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=280&q=80" alt="Team collaboration" />
       <p>We help our founders hire the small number of early engineers and other team members critical to finding product market fit. At any given time there are 150,000+ candidates searching for jobs.</p>
     </div>
   </div>
